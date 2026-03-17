@@ -1,7 +1,7 @@
-<!-- Todo código em HTML é feito dessa forma (pelo menos no padrão brasileiro) -->
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
+<!-- Todo código em HTML é feito dessa forma (pelo menos no padrão brasileiro) -->
 
 <head>
     <meta charset="UTF-8">
@@ -15,34 +15,57 @@
     <style>
         body {
             background-image: url('why-is-larry-so-evil-v0-ty3qlu4swjle1.jpg');
+            background-position: center;
             background-size: cover;
+        }
+
+        body * {
+            text-shadow:
+                -1px -1px 0 #ffffff,
+                0 -1px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                -1px 0 0 #ffffff,
+                1px 0 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                0 1px 0 #ffffff,
+                1px 1px 0 #ffffff;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
         }
     </style>
     <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <h1><font aria-setsize="20">Primeiro projeto feito em <span style="color: white;">HTML</span></h1>
+        <h1 style="font-size: 30px;">Primeiro projeto feito em HTML</h1>
     </div>
 
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <h2>Breve explicação sobre o projeto</h2>
+    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;"> 
+        <h2 style="font-size: 25px;">Breve explicação sobre o projeto</h2>
         
         <p>Esse é um teste para um trabalho de faculdade, onde o objetivo é criar um site simples usando HTML. <br> Estou aprendendo a estruturar uma página web e a usar as tags básicas do HTML para criar conteúdo. <br>
         Também utilizei a ajuda do COPILOT que já vem nativo no VS Code, me ajudando a corrigir erros e implementar novas funcionalidades.</p>
     </div>
 
     <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <h3>Exemplos de formatação de texto:</h3>
+        <h3 style="font-size: 25px;">Exemplos de formatação de texto:</h3>
         
-        <p>Para deixar algo em negrito fazemos assim: <b>negrito</b> (a fórmula usada foi &lt;b&gt;&lt;/b&gt;) </p> Ou assim: <b><strong>Fica dessa forma</strong></b> (a fórmula usada foi &lt;b&lt;strong&gt;&lt;strong&gt;&lt;/b&gt;) 
+        <p>Para deixar algo em negrito fazemos assim: <b>negrito</b> (a fórmula usada foi &lt;b&gt;&lt;/b&gt;). Ou assim: <strong>Fica dessa forma</strong> (a fórmula usada foi &lt;strong&gt;&lt;/strong&gt;).</p>
         
-        <p>Para deixar algo em itálico fazemos assim: <i>itálico</i> (a fórmula usada foi &lt;i&gt;&lt;/i&gt;) </p> Ou assim: <i><em>Fica dessa forma</em></i> (a fórmula usada foi &lt;i&gt;&lt;em&gt;&lt;em&gt;&lt;/i&gt;)
+        <p>Para deixar algo em itálico fazemos assim: <i>itálico</i> (a fórmula usada foi &lt;i&gt;&lt;/i&gt;). Ou assim: <em>Fica dessa forma</em> (a fórmula usada foi &lt;em&gt;&lt;/em&gt;).</p>
         
-        <p>Para sublinar algo, fazemos assim: <u>Fica assim</u> (a fórmula usada foi &lt;u&gt;&lt;/u&gt;)</p> Agora por exemplo, podemos sublinar e deixar em negrio ao mesmo tempo: <b><u>Fica dessa forma</u></b>
+        <p>Para sublinhar algo, fazemos assim: <u>Fica assim</u> (a fórmula usada foi &lt;u&gt;&lt;/u&gt;). Agora por exemplo, podemos sublinhar e deixar em negrito ao mesmo tempo: <b><u>Fica dessa forma</u></b>.</p>
         
-        <p>Para destacar algo, fazemos assim: <mark>Fica assim</mark> (a fórmula usada foi &lt;mark&gt;&lt;/mark&gt;)</p> Agora por exemplo, podemos destacar e deixar em negrio ao mesmo tempo: <b><mark>Fica dessa forma</mark></b>
+        <p>Para destacar algo, fazemos assim: <mark>Fica assim</mark> (a fórmula usada foi &lt;mark&gt;&lt;/mark&gt;). Agora por exemplo, podemos destacar e deixar em negrito ao mesmo tempo: <b><mark>Fica dessa forma</mark></b>.</p>
     </div>
 
     <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <p>Para inserir uma imagem, usamos a tag &lt;img&gt;. Por exemplo: <br> <br> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQup4Lv_xekkv-qe7c1czPIgTdgBcIZqIwsQ&s" alt="nome ou descrição da imagem" width="16%"></p>
+        <p>Para inserir uma imagem, usamos a tag &lt;img&gt;. Por exemplo: <br> <br> <img src="LARRY1.jpg" alt="nome ou descrição da imagem" width="16%"></p>
     </div>
     
     <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
@@ -50,23 +73,21 @@
     </div>
 
     <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <p>Agora caso queira adicionar uma imagem clicável que abre em uma nova aba, basta colocar a tag &lt;img&gt; dentro da tag &lt;a&gt; e adicionar target="_blank". <br>Por exemplo: <br> <br> <a href="newpage.html" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUb0lycg5ZOks_dSBwpYmebym9qUOOjy7Z5w&s" alt="nome ou descrição da imagem" width="15%"></a> <br> <br> (a fórmula usada foi &lt;a target="_blank"&gt;&lt;img&gt;&lt;/img&gt;&lt;/a&gt;)</p>
+        <p>Agora caso queira adicionar uma imagem clicável que abre em uma nova aba, basta colocar a tag &lt;img&gt; dentro da tag &lt;a&gt; e adicionar target="_blank". <br>Por exemplo: <br> <br> <a href="newpage.html" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUb0lycg5ZOks_dSBwpYmebym9qUOOjy7Z5w&s" alt="LARRY 2" width="15%"></a> <span style="font-size: 20px; font-weight: bold;">&lt;-- Clique aqui</span> <br> <br> (a fórmula usada foi &lt;a target="_blank"&gt;&lt;img&gt;&lt;/img&gt;&lt;/a&gt;)</p>
     </div>
 
     <!-- No final de toda página é sempre bom colocar os direitos autorais -->
 
-<div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-<h3>Não clique no vídeo</h3>
+    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
+        <h3 style="font-size: 25px;">Não clique no vídeo</h3>
 
-<video width="560" height="315" controls>
-    <source src="videoplayback.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+        <video controls>
+            <source src="videoplayback.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
-</div>
-
+    <footer>Copyright © Todos os direitos reservados a Gabriel Lima 2026</footer>
 </body>
-
-    <footer> Copyright ©Todos os direitos reservados a Gabriel Lima 2026</footer>
 </html>
 

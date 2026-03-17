@@ -8,19 +8,66 @@
 <body>
     <style>
         body {
-            background-color: rgb(182, 182, 182);
+            background-image: url('images.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        body * {
+            text-shadow:
+                -1px -1px 0 #ffffff,
+                0 -1px 0 #ffffff,
+                1px -1px 0 #ffffff,
+                -1px 0 0 #ffffff,
+                1px 0 0 #ffffff,
+                -1px 1px 0 #ffffff,
+                0 1px 0 #ffffff,
+                1px 1px 0 #ffffff;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
         }
     </style>
     <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <h1>Bem-vindo à Nova Página!</h1>
+        <h1 style="font-size: 30px;">Bem-vindo à Nova Página!</h1>
     </div>
     <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-    
-    <p>Funciona como esperado, o link direciona para essa nova janela.<br> <br> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqg89YDJf2PzKPt95WSR1YHQTvsPBU2G7LpQ&s" alt="nome ou descrição da imagem" width="15%"></p>
-    
-    <p>Você pode clicar no link abaixo para voltar à página inicial.</p>
-    
-    <a href="#" onclick="window.close(); return false;">Voltar à página inicial</a>
+        <p>Funciona como esperado, o link direciona para essa nova janela.<br> <br>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqg89YDJf2PzKPt95WSR1YHQTvsPBU2G7LpQ&s" alt="nome ou descrição da imagem" width="15%">
+        </p>
+    </div>
+
+    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
+        <form>
+            <h2 style="font-size: 25px;">Envie uma mensagem para o LARRY</h2>
+
+            <p>
+                <label for="name">Nome:</label><br>
+                <input type="text" id="name" name="name" required>
+            </p>
+
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <p>
+                <label for="message">Mensagem:</label><br>
+                <textarea id="message" name="message" required></textarea>
+            </p>
+
+            <input type="submit" value="Enviar">
+            <p><small>(Sem JavaScript, esse formulário não envia para lugar nenhum, é só visual)</small></p>
+        </form>
+    </div>
+
+    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
+        <p>Você pode clicar no link abaixo para voltar à página inicial.</p>
+        <a href="#" onclick="window.close(); return false;">Voltar à página inicial</a>
     </div>
 </body>
+
 </html>
