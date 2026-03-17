@@ -40,19 +40,45 @@
             max-width: 100%;
             height: auto;
         }
+
+        nav {
+            border: 3px solid #000000;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            display: block;
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+
+        nav a {
+            color: black;
+            font-weight: bold;
+            margin-right: 12px;
+        }
     </style>
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
+
+    <nav>
+        <a href="#topo">Topo</a>
+        <a href="#explicacao">Explicação</a>
+        <a href="#formatacao">Formatação</a>
+        <a href="#imagem">Imagem</a>
+        <a href="#links">Links</a>
+        <a href="#video">Vídeo</a>
+    </nav>
+    <div id="topo" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
         <h1 style="font-size: 30px;">Primeiro projeto feito em HTML</h1>
     </div>
 
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;"> 
+    <div id="explicacao" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;"> 
         <h2 style="font-size: 25px;">Breve explicação sobre o projeto</h2>
         
         <p>Esse é um teste para um trabalho de faculdade, onde o objetivo é criar um site simples usando HTML. <br> Estou aprendendo a estruturar uma página web e a usar as tags básicas do HTML para criar conteúdo. <br>
         Também utilizei a ajuda do COPILOT que já vem nativo no VS Code, me ajudando a corrigir erros e implementar novas funcionalidades.</p>
     </div>
 
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
+    <div id="formatacao" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
         <h3 style="font-size: 25px;">Exemplos de formatação de texto:</h3>
         
         <p>Para deixar algo em negrito fazemos assim: <b>negrito</b> (a fórmula usada foi &lt;b&gt;&lt;/b&gt;). Ou assim: <strong>Fica dessa forma</strong> (a fórmula usada foi &lt;strong&gt;&lt;/strong&gt;).</p>
@@ -64,11 +90,11 @@
         <p>Para destacar algo, fazemos assim: <mark>Fica assim</mark> (a fórmula usada foi &lt;mark&gt;&lt;/mark&gt;). Agora por exemplo, podemos destacar e deixar em negrito ao mesmo tempo: <b><mark>Fica dessa forma</mark></b>.</p>
     </div>
 
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
+    <div id="imagem" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
         <p>Para inserir uma imagem, usamos a tag &lt;img&gt;. Por exemplo: <br> <br> <img src="LARRY1.jpg" alt="nome ou descrição da imagem" width="16%"></p>
     </div>
     
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
+    <div id="links" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
         <p>Para inserir links que abrem em uma nova aba, usamos a tag &lt;a&gt; com target="_blank". <br>Por exemplo: <br> <br> <a href="https://www.google.com" target="_blank">Clique aqui para acessar o Google</a> (a fórmula usada foi &lt;a target="_blank"&gt;&lt;/a&gt;)</p>
     </div>
 
@@ -78,7 +104,7 @@
 
     <!-- No final de toda página é sempre bom colocar os direitos autorais -->
 
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
+    <div id="video" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
         <h3 style="font-size: 25px;">Não clique no vídeo</h3>
 
         <video controls>
