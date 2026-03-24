@@ -3,71 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova Página</title>
-</head>
-<body>
+    <title>Nova Página - Projeto Gabriel Lima Ferreira</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
+            margin: 0;
+            padding: 0 16px 40px;
+            font-family: Helvetica, Arial, sans-serif;
             background-image: url('images.jpg');
             background-position: center;
             background-size: cover;
+            background-attachment: fixed;
+            color: #1a1a1a;
         }
 
-        body * {
-            text-shadow:
-                -1px -1px 0 #ffffff,
-                0 -1px 0 #ffffff,
-                1px -1px 0 #ffffff,
-                -1px 0 0 #ffffff,
-                1px 0 0 #ffffff,
-                -1px 1px 0 #ffffff,
-                0 1px 0 #ffffff,
-                1px 1px 0 #ffffff;
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: -1;
         }
 
-        img,
-        video {
+        .section {
+            background-color: rgba(255, 255, 255, 0.92);
+            border: 3px solid #000;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 16px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2 { margin-top: 0; }
+        h1 { font-size: 28px; }
+        h2 { font-size: 22px; }
+
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        img {
             max-width: 100%;
             height: auto;
+            border-radius: 6px;
+        }
+
+        label { display: block; margin-bottom: 4px; font-weight: bold; }
+        input, textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 2px solid #333;
+            border-radius: 6px;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            padding: 10px 24px;
+            background: #333;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #555;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #0066cc;
+            font-weight: bold;
         }
     </style>
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <h1 style="font-size: 30px;">Bem-vindo à Nova Página!</h1>
-    </div>
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <p font style="font-size: 18px;">Funciona como esperado, o link direciona para essa nova janela.<br> <br>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqg89YDJf2PzKPt95WSR1YHQTvsPBU2G7LpQ&s" alt="nome ou descrição da imagem" width="15%">
-        </p>
+</head>
+<body>
+    <div class="section">
+        <h1>Bem-vindo à Nova Página!</h1>
     </div>
 
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
+    <div class="section">
+        <p>Funciona como esperado, o link direciona para essa nova janela.</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqg89YDJf2PzKPt95WSR1YHQTvsPBU2G7LpQ&s" alt="Imagem ilustrativa" width="200">
+    </div>
+
+    <div class="section">
         <form>
-            <h2 style="font-size: 25px;">Envie uma mensagem para o LARRY</h2>
-
+            <h2>Envie uma mensagem para o LARRY</h2>
             <p>
-                <label for="name">Nome:</label><br>
+                <label for="name">Nome:</label>
                 <input type="text" id="name" name="name" required>
             </p>
-
             <p>
-                <label for="email">Email:</label><br>
+                <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </p>
-
             <p>
-                <label for="message">Mensagem:</label><br>
+                <label for="message">Mensagem:</label>
                 <textarea id="message" name="message" required></textarea>
             </p>
-
             <input type="submit" value="Enviar">
             <p><small>(Sem JavaScript, esse formulário não envia para lugar nenhum, é só visual)</small></p>
         </form>
     </div>
 
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
+    <div class="section">
         <p>Você pode clicar no link abaixo para voltar à página inicial.</p>
-        <a href="#" onclick="window.close(); return false;">Voltar à página inicial</a>
+        <a href="index.html" class="back-link">← Voltar à página inicial</a>
     </div>
 </body>
-
 </html>

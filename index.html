@@ -1,68 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<!-- Todo código em HTML é feito assim (pelo menos no padrão brasileiro) -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Gabriel Lima Ferreira</title>
-</head>
-
-<!-- O corpo do site é onde colocamos o conteúdo que queremos mostrar para as pessoas, como textos, imagens, vídeos, etc. -->
-
-<body>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
+            margin: 0;
+            padding: 0 16px 40px;
+            font-family: Helvetica, Arial, sans-serif;
             background-image: url('why-is-larry-so-evil-v0-ty3qlu4swjle1.jpg');
             background-position: center;
             background-size: cover;
+            background-attachment: fixed;
+            color: #1a1a1a;
         }
 
-        body * {
-            text-shadow:
-                -1px -1px 0 #ffffff,
-                0 -1px 0 #ffffff,
-                1px -1px 0 #ffffff,
-                -1px 0 0 #ffffff,
-                1px 0 0 #ffffff,
-                -1px 1px 0 #ffffff,
-                0 1px 0 #ffffff,
-                1px 1px 0 #ffffff;
+        /* Overlay escuro para melhor legibilidade */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: -1;
         }
 
-        p {
-            font-size: 18px;
-        }
-
-        img,
-        video {
-            max-width: 100%;
-            height: auto;
+        /* Seções com fundo semi-transparente para destaque */
+        .section {
+            background-color: rgba(255, 255, 255, 0.92);
+            border: 3px solid #000;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 16px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
         nav {
-            border: 3px solid #000000;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: rgba(0, 0, 0, 0.75);
-            display: block;
+            background-color: rgba(0, 0, 0, 0.9);
+            border: 3px solid #000;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 0 0 20px;
             position: sticky;
             top: 0;
             z-index: 9999;
         }
 
-        p  {
-            font-family: helvetica, sans-serif; 
+        nav a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 20px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: background 0.2s;
         }
 
-        nav a {
-            color: black;
-            font-weight: bold;
-            margin-right: 12px;
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        h1 { font-size: 28px; margin-top: 0; }
+        h2, h3 { font-size: 22px; margin-top: 0; }
+
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .section img {
+            display: block;
+            margin: 12px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 32px;
+            padding: 16px;
+            font-size: 14px;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            border: 2px solid #000;
         }
     </style>
-
+</head>
+<body>
     <nav>
         <a href="#topo">Topo</a>
         <a href="#explicacao">Explicação</a>
@@ -71,55 +107,59 @@
         <a href="#links">Links</a>
         <a href="#video">Vídeo</a>
     </nav>
-    <div id="topo" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <h1 style="font-size: 30px;">Primeiro projeto feito em HTML</h1>
+
+    <div id="topo" class="section">
+        <h1>Primeiro projeto feito em HTML</h1>
     </div>
 
-    <div id="explicacao" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;"> 
-        <h2 style="font-size: 25px;">Breve explicação sobre o projeto</h2>
-        
-        <p>Esse é um teste para um trabalho de faculdade, onde o objetivo é criar um site simples usando HTML. <br> Estou aprendendo a estruturar uma página web e a usar as tags básicas do HTML para criar conteúdo. <br>
-        Também utilizei a ajuda do COPILOT que já vem nativo no VS Code, me ajudando a corrigir erros e implementar novas funcionalidades.</p>
+    <div id="explicacao" class="section">
+        <h2>Breve explicação sobre o projeto</h2>
+        <p>
+            Esse é um teste para um trabalho de faculdade, onde o objetivo é criar um site simples usando HTML.
+            Estou aprendendo a estruturar uma página web e a usar as tags básicas do HTML para criar conteúdo.
+            Também utilizei a ajuda do COPILOT que já vem nativo no VS Code, me ajudando a corrigir erros e implementar novas funcionalidades.
+        </p>
     </div>
 
-    <div id="formatacao" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <h3 style="font-size: 25px;">Exemplos de formatação de texto:</h3>
-        
-        <p>Para deixar algo em negrito fazemos assim: <b>negrito</b> (a fórmula usada foi &lt;b&gt;&lt;/b&gt;). Ou assim: <strong>Fica dessa forma</strong> (a fórmula usada foi &lt;strong&gt;&lt;/strong&gt;).</p>
-        
-        <p>Para deixar algo em itálico fazemos assim: <i>itálico</i> (a fórmula usada foi &lt;i&gt;&lt;/i&gt;). Ou assim: <em>Fica dessa forma</em> (a fórmula usada foi &lt;em&gt;&lt;/em&gt;).</p>
-        
-        <p>Para sublinhar algo, fazemos assim: <u>Fica assim</u> (a fórmula usada foi &lt;u&gt;&lt;/u&gt;). Agora por exemplo, podemos sublinhar e deixar em negrito ao mesmo tempo: <b><u>Fica dessa forma</u></b>.</p>
-        
-        <p>Para destacar algo, fazemos assim: <mark>Fica assim</mark> (a fórmula usada foi &lt;mark&gt;&lt;/mark&gt;). Agora por exemplo, podemos destacar e deixar em negrito ao mesmo tempo: <b><mark>Fica dessa forma</mark></b>.</p>
+    <div id="formatacao" class="section">
+        <h3>Exemplos de formatação de texto</h3>
+        <p><strong>Negrito:</strong> <b>negrito</b> (&lt;b&gt;) ou <strong>strong</strong> (&lt;strong&gt;).</p>
+        <p><strong>Itálico:</strong> <i>itálico</i> (&lt;i&gt;) ou <em>ênfase</em> (&lt;em&gt;).</p>
+        <p><strong>Sublinhado:</strong> <u>sublinhado</u> (&lt;u&gt;). Combinando: <b><u>negrito e sublinhado</u></b>.</p>
+        <p><strong>Destacar:</strong> <mark>marcado</mark> (&lt;mark&gt;). Combinando: <b><mark>negrito e marcado</mark></b>.</p>
     </div>
 
-    <div id="imagem" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <p>Para inserir uma imagem, usamos a tag &lt;img&gt;. Por exemplo: <br> <br> <img src="LARRY1.jpg" alt="nome ou descrição da imagem" width="16%"></p>
-    </div>
-    
-    <div id="links" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <p>Para inserir links que abrem em uma nova aba, usamos a tag &lt;a&gt; com target="_blank". <br>Por exemplo: <br> <br> <a href="https://www.google.com" target="_blank">Clique aqui para acessar o Google</a> (a fórmula usada foi &lt;a target="_blank"&gt;&lt;/a&gt;)</p>
+    <div id="imagem" class="section">
+        <h3>Inserir imagem</h3>
+        <p>Usamos a tag &lt;img&gt; com os atributos <code>src</code> e <code>alt</code>:</p>
+        <img src="LARRY1.jpg" alt="Larry" width="200">
     </div>
 
-    <div style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <p>Agora caso queira adicionar uma imagem clicável que abre em uma nova aba, basta colocar a tag &lt;img&gt; dentro da tag &lt;a&gt; e adicionar target="_blank". <br>Por exemplo: <br> <br> <a href="newpage.html" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUb0lycg5ZOks_dSBwpYmebym9qUOOjy7Z5w&s" alt="LARRY 2" width="15%"></a> <span style="font-size: 20px; font-weight: bold;">&lt;-- Clique aqui</span> <br> <br> (a fórmula usada foi &lt;a target="_blank"&gt;&lt;img&gt;&lt;/img&gt;&lt;/a&gt;)</p>
+    <div id="links" class="section">
+        <h3>Links em nova aba</h3>
+        <p>Tag &lt;a&gt; com <code>target="_blank"</code>:</p>
+        <p><a href="https://www.google.com" target="_blank" rel="noopener">Clique aqui para acessar o Google</a></p>
     </div>
 
-    <!-- No final de toda página é sempre bom colocar os direitos autorais -->
+    <div class="section">
+        <h3>Imagem clicável</h3>
+        <p>Coloque &lt;img&gt; dentro de &lt;a&gt; com <code>target="_blank"</code>:</p>
+        <a href="newpage.html" target="_blank" rel="noopener">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUb0lycg5ZOks_dSBwpYmebym9qUOOjy7Z5w&s" alt="Clique para nova página" width="180">
+        </a>
+        <p><small>← Clique na imagem para abrir a nova página</small></p>
+    </div>
 
-    <div id="video" style="border: 3px solid #000000; padding: 10px; margin: 10px 0;">
-        <h3 style="font-size: 25px;">Não clique no vídeo</h3>
-
+    <div id="video" class="section">
+        <h3>Não clique no vídeo</h3>
         <video controls>
             <source src="videoplayback.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 
-    <footer>Copyright © Todos os direitos reservados a Gabriel Lima Ferreira 2026</footer>
+    <footer>
+        Copyright © 2026 Gabriel Lima Ferreira. Todos os direitos reservados.
+    </footer>
 </body>
 </html>
-
-<!-- teste -->
- 
